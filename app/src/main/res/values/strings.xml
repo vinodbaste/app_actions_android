@@ -1,0 +1,12 @@
+<resources>
+  <string name="app_name">Stock Tracker</string>
+  <string name="stock_symbol">Enter the stock symbol</string>
+  <string name="empty_stock">Please enter a stock symbol</string>
+  <string name="error_api">Some error occurred in fetching data from API</string>
+  <string name="welcome_message">Welcome to Stock Tracker!</string>
+  <string name="get_quote">Get Quote</string>
+  <string name="symbol">Symbol</string>
+  <string name="price">Price</string>
+  <string name="high">High</string>
+  <string name="low">Low</string>
+</resources>

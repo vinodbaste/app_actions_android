@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<actions>
+  <action intentName="actions.intent.GET_STOCK_QUOTE">
+    <fulfillment urlTemplate="app://stocktracker/query{?symbol}">
+      <parameter-mapping
+          intentParameter="tickerSymbol"
+          required="true"
+          urlParameter="symbol" />
+    </fulfillment>
+
+    <!-- Fallback fulfillment when no parameter supplied -->
+    <fulfillment urlTemplate="app://stocktracker/home" />
+  </action>
+
+</actions>

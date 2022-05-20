@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorLightGray"
+    tools:context=".StockQuoteActivity">
+
+  <ProgressBar
+      android:id="@+id/getQuoteProgress"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="parent" />
+
+  <androidx.cardview.widget.CardView
+      android:id="@+id/stockQuoteCard"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginEnd="20dp"
+      android:layout_marginStart="20dp"
+      android:elevation="4dp"
+      android:visibility="gone"
+      app:cardCornerRadius="8dp"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+      <TextView
+          android:id="@+id/symbolLabel"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginTop="20dp"
+          android:text="@string/symbol"
+          android:textColor="@android:color/black"
+          android:textSize="20sp"
+          android:textStyle="bold"
+          app:layout_constraintEnd_toEndOf="parent"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintTop_toTopOf="parent" />
+
+      <TextView
+          android:id="@+id/symbolValue"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:textColor="@android:color/black"
+          android:textSize="18sp"
+          app:layout_constraintEnd_toEndOf="@id/symbolLabel"
+          app:layout_constraintStart_toStartOf="@id/symbolLabel"
+          app:layout_constraintTop_toBottomOf="@id/symbolLabel"
+          tools:text="TCS" />
+
+      <TextView
+          android:id="@+id/priceLabel"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginTop="20dp"
+          android:text="@string/price"
+          android:textColor="@android:color/black"
+          android:textSize="20sp"
+          android:textStyle="bold"
+          app:layout_constraintEnd_toEndOf="parent"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintTop_toBottomOf="@id/symbolValue" />
+
+      <TextView
+          android:id="@+id/priceValue"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:textColor="@android:color/black"
+          android:textSize="18sp"
+          app:layout_constraintEnd_toEndOf="@id/priceLabel"
+          app:layout_constraintStart_toStartOf="@id/priceLabel"
+          app:layout_constraintTop_toBottomOf="@id/priceLabel"
+          tools:text="120.600" />
+
+      <TextView
+          android:id="@+id/highLabel"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginTop="20dp"
+          android:text="@string/high"
+          android:textColor="@android:color/black"
+          android:textSize="20sp"
+          android:textStyle="bold"
+          app:layout_constraintEnd_toEndOf="parent"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintTop_toBottomOf="@id/priceValue" />
+
+      <TextView
+          android:id="@+id/highValue"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:textColor="@android:color/black"
+          android:textSize="18sp"
+          app:layout_constraintEnd_toEndOf="@id/highLabel"
+          app:layout_constraintStart_toStartOf="@id/highLabel"
+          app:layout_constraintTop_toBottomOf="@id/highLabel"
+          tools:text="120.600" />
+
+      <TextView
+          android:id="@+id/lowLabel"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginTop="20dp"
+          android:text="@string/low"
+          android:textColor="@android:color/black"
+          android:textSize="20sp"
+          android:textStyle="bold"
+          app:layout_constraintEnd_toEndOf="parent"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintTop_toBottomOf="@id/highValue" />
+
+      <TextView
+          android:id="@+id/lowValue"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginBottom="20dp"
+          android:textColor="@android:color/black"
+          android:textSize="18sp"
+          app:layout_constraintBottom_toBottomOf="parent"
+          app:layout_constraintEnd_toEndOf="@id/lowLabel"
+          app:layout_constraintStart_toStartOf="@id/lowLabel"
+          app:layout_constraintTop_toBottomOf="@id/lowLabel"
+          tools:text="120.600" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+  </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
